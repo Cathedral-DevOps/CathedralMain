@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/pricing.css')}}" />
+    <title>c.dev - Pricing </title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+  </style>
+  <body>
+    <section class="navigation">
+      <header class="header">
+        <div class="header_content">
+           <a href="" class="logo">
+            <img class="logo_img" src="{{ url_for('static',filename='images/logo.svg')}}" alt="Company Logo" />
+          </a>
+         <nav class="nav">
+            <ul class="nav_list">
+              <li class="nav_item">
+                <a href="{{ url_for('home') }}" target="_blank" class="nav_link">Home</a>
+              </li>
+              <li class="nav_item">
+                <a href="{{ url_for('pricing') }}" target="_blank" class="nav_link">Pricing</a>
+              </li>
+              <li class="nav_item">
+                <a href="{{ url_for('orders') }}" target="_blank" class="nav_link">Orders</a>
+              </li>
+              <li class="nav_item">
+                <a href="{{ url_for('about') }}" target="_blank" class="nav_link">About</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    </section>
+    <section class="hero">
+        <div class="glow-overlay"></div>
+        <div class="grid-background"></div>
+      <h1 class="h1primary">Pricing</h1>
+      <p class="p-primary"> 
+        For SaaS development:
+        <br>
+        We will create websites, backends, frontends, and servers for you. Please specify more details when you contact us with your orders.
+        <br>
+        BASIC -
+        <br>
+        $5/month - Small websites, servers, frontends, or backends. No domain registration.
+        <br>
+        PLUS - 
+        <br>
+        $15/month - Larger websites, servers, Docker/Containerization, frontends, backends, mobile apps
+        <br>
+        MAX - 
+        <br>
+        $35/month - Ecommerce, University, or other large-scale networks, infrastructure, sites and databases for institutions or businesses
+        <br>
+        For Mobile apps, etc
+        <br>
+        Starting at $45 per application. The most an app can cost is $200!
+        <br>
+        For Non-Profits/Institutions: FREE! 
+        <br>
+        To order, check out the order page and/or email us at cathedralsocial.tech@gmail.com.
+      </p>
+      <div class="box"></div>
+
+      <hr class="dividerline"> </hr>
+    </section>
+    <script>
+        const overlay = document.querySelector('.glow-overlay');
+        window.addEventListener('mousemove', (e) =>{
+            overlay.style.setProperty('--mouse-x', `${e.clientX}px`)
+            overlay.style.setProperty('--mouse-y', `${e.clientY}px`)
+
+        })
+    </script>
+  </body>
+</html>

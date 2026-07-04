@@ -1,0 +1,12 @@
+services:
+  web:
+    build: .
+    container_name: main_flask_app
+    restart: unless-stopped
+    ports:
+     - "127.0.0.1:8002:5000"
+    env_file:
+      - .env
+    environment:
+      - FLASK_ENV=production
+      - PYTHONUNBUFFERED=1

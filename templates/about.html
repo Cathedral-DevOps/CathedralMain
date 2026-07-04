@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/about.css')}}" />
+    <title>c.dev</title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+  </style>
+  <body>
+    <section class="navigation">
+      <header class="header">
+        <div class="header_content">
+          <a href="" class="logo">
+            <img class="logo_img" src="{{ url_for('static',filename='images/logo.svg')}}" alt="Company Logo" />
+          </a>
+         <nav class="nav">
+            <ul class="nav_list">
+              <li class="nav_item">
+                <a href="{{ url_for('home') }}" target="_blank" class="nav_link">Home</a>
+              </li>
+              <li class="nav_item">
+                <a href="{{ url_for('pricing') }}" target="_blank" class="nav_link">Pricing</a>
+              </li>
+              <li class="nav_item">
+                <a href="{{ url_for('orders') }}" target="_blank" class="nav_link">Orders</a>
+              </li>
+              <li class="nav_item">
+                <a href="{{ url_for('about') }}" target="_blank" class="nav_link">About</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    </section>
+    <section class="hero">
+        <div class="glow-overlay"></div>
+        <div class="grid-background"></div>
+      <h1 class="h1primary">Welcome to Cathedral Development!</h1>
+      <p class="p-primary"> 
+        Your one-stop shop for SaaS, web development, app development, iOS,
+        Android, and more!
+        <br>
+        We are a small development group based in Lubbock, serving Lubbock county and 
+        <br>
+        other nearby counties and Texan organizations with specialized services such as
+        <br>
+        Web development, SaaS, mobile applications, CGI (Art only), and video game development.
+        <br>
+        We live and run by Catholic morals, as we are an inherently Catholic organization. However,
+        <br>
+        our team believes in ecumenism and we will hire anyone!
+        <br>
+        God Bless You, my friend! 
+         - Cathedral Development
+      </p>
+      <div class="box"></div>
+
+      <hr class="dividerline"> </hr>
+    </section>
+    <script>
+        const overlay = document.querySelector('.glow-overlay');
+        window.addEventListener('mousemove', (e) =>{
+            overlay.style.setProperty('--mouse-x', `${e.clientX}px`)
+            overlay.style.setProperty('--mouse-y', `${e.clientY}px`)
+
+        })
+    </script>
+  </body>
+</html>
