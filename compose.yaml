@@ -10,3 +10,5 @@ services:
     environment:
       - FLASK_ENV=production
       - PYTHONUNBUFFERED=1
+    mem_limit: 512m
+    mem_reservation: 256m

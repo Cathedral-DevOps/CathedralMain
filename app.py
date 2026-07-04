@@ -5,10 +5,13 @@ from dotenv import load_dotenv
 app = Flask(__name__)
 load_dotenv()
 #Routing
-
 @app.route("/")
 def home():
     return render_template("index.html")
+
+@app.route("/weblink")
+def weblink():
+    return "SUCCESS", 200
 
 @app.route("/pricing")
 def pricing():
