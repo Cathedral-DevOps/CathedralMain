@@ -60,6 +60,43 @@
       <div class="box"></div>
 
       <hr class="dividerline"> </hr>
+      <h1>Our Team</h1>
+       <div class="card-container">
+          <div class="card">
+            <img src="{{ url_for('static',filename='images/logo.svg')}}">
+            <div class="card-content">
+              <h3>A. Mathew</h3>
+              <p> Head Developer <br>
+              Languages: Kotlin, Swift, C#, Python, HTML/CSS,XAML
+              Services: SaaS, Docker, VPS and Web Apps, Mobile Apps
+              </p>
+              <a href="{{ url_for('orders') }}" class="btn">ORDER</a>
+          </div>
+        </div>
+         <div class="card-container">
+          <div class="card">
+            <img src="{{ url_for('static',filename='images/logo.svg')}}">
+            <div class="card-content">
+              <h3>K. Pakzad</h3>
+              <p> Co-Developer <br>
+              Languages: Python, C#, HTML/CSS/JavaScript
+              ServiceS: SaaS, Game Development, Web Apps
+              </p>
+              <a href="{{ url_for('orders') }}" class="btn">ORDER</a>
+          </div>
+        </div>
+         <div class="card-container">
+          <div class="card">
+            <img src="{{ url_for('static',filename='images/logo.svg')}}">
+            <div class="card-content">
+              <h3>I. Miranda</h3>
+              <p> Developer <br>
+               Languages: Python, C++, HTML, JS, CSS
+               Services: Specialized Services (contact via email), Web Services
+              </p>
+              <a href="{{ url_for('orders') }}" class="btn">ORDER</a>
+          </div>
+        </div>
     </section>
     <script>
         const overlay = document.querySelector('.glow-overlay');

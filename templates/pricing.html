@@ -39,36 +39,102 @@
     <section class="hero">
         <div class="glow-overlay"></div>
         <div class="grid-background"></div>
-      <h1 class="h1primary">Pricing</h1>
-      <p class="p-primary"> 
-        For SaaS development:
-        <br>
-        We will create websites, backends, frontends, and servers for you. Please specify more details when you contact us with your orders.
-        <br>
-        BASIC -
-        <br>
-        $5/month - Small websites, servers, frontends, or backends. No domain registration.
-        <br>
-        PLUS - 
-        <br>
-        $15/month - Larger websites, servers, Docker/Containerization, frontends, backends, mobile apps
-        <br>
-        MAX - 
-        <br>
-        $35/month - Ecommerce, University, or other large-scale networks, infrastructure, sites and databases for institutions or businesses
-        <br>
-        For Mobile apps, etc
-        <br>
-        Starting at $45 per application. The most an app can cost is $200!
-        <br>
-        For Non-Profits/Institutions: FREE! 
-        <br>
-        To order, check out the order page and/or email us at cathedralsocial.tech@gmail.com.
-      </p>
-      <div class="box"></div>
 
+      <h1 class="h1primary">Pricing</h1>
+      
+      <p class="p-primary"> 
+       Have a look at our quick-order packages below!
+       Some may require use of our email service.
+      </p>
+      <p class="p-sub">
+            Note: ALL ARE FREE FOR NON-PROFITS, CHURCH OR INSTITUTIONAL ORGANIZATIONS!
+      </p>
       <hr class="dividerline"> </hr>
+
+
+
+        <div class="card-container">
+          <div class="card">
+            <img src="{{ url_for('static',filename='images/saas.svg')}}">
+            <div class="card-content">
+              <h3>SaaS - $5/month+</h3>
+              <p> 
+                  SaaS orders get FIRST priority over all other customers due to recurring payments! <br>
+                  We will create websites, backends, frontends, and servers for you. Please specify more details when you contact us with your orders.
+                  <br>
+                  BASIC -
+                  <br>
+                  $5/month - Small websites, servers, frontends, or backends. No domain registration.
+                  <br>
+                  PLUS - (Includes Domain Registration as an addon ($12/month), no Ownership)
+                  <br>
+                  $15/month - Larger websites, servers, Docker/Containerization, frontends, backends, mobile apps
+                  <br>
+                  MAX - (Domain registration included, no Ownership)
+                  <br>
+                  $35/month - Ecommerce, University, or other large-scale networks, infrastructure, sites and databases for institutions or businesses
+              </p>
+              <a href="{{ url_for('orders') }}"" class="btn">ORDER</a>
+          </div>
+        </div>
+         <div class="card-container">
+          <div class="card">
+            <img src="{{ url_for('static',filename='images/mobileapps.svg')}}">
+            <div class="card-content">
+              <h3>Mobile Apps - $20+</h3>
+              <p> Kotlin, Swift, Databases and more!
+                <br>
+                For detailed requests, please order via our **email service**.
+                <br>
+                These projects can take months to a year to complete, so please be patient.
+                <br>
+                BASIC:
+                <br>
+                $20 - Single OS App with One Database (NoSQL)
+                <br>
+                PLUS:
+                <br>
+                $70 - Dual OS App with One or more Databases (NoSQL)
+              </p>
+              <a href="{{ url_for('orders') }}"" class="btn">ORDER</a>
+          </div>
+        </div>
+         <div class="card-container">
+          <div class="card">
+            <img src="{{ url_for('static',filename='images/game.svg')}}">
+            <div class="card-content">
+              <h3>Game Dev - $40+</h3>
+              <p> To order Game Development, <br>
+              please use our email service. 
+              <br>
+              Starting at $40, at most $350.
+              Made in Unity 5+.
+              </p>
+              <a href="{{ url_for('orders') }}"" class="btn">ORDER</a>
+          </div>
+        </div>
+           </div>
+       
+         <div class="card-container">
+          <div class="card">
+            <img src="{{ url_for('static',filename='images/logo.svg')}}">
+            <div class="card-content">
+              <h3>Quick Orders</h3>
+              <p> To order quick orders... <br>
+              Starting at $90, at most $350.
+              Made in 2 weeks or less. These orders will get priority, second to SaaS.
+              </p>
+              <a href="{{ url_for('orders') }}"" class="btn">ORDER</a>
+          </div>
+        </div>
     </section>
+    <div>
+        <p class="subsub">
+          All orders are based on our Developer's schedules. We will try our best to finish your order quickly!
+          <br>
+
+        </p>
+       </div>
     <script>
         const overlay = document.querySelector('.glow-overlay');
         window.addEventListener('mousemove', (e) =>{

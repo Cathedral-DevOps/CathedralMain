@@ -55,6 +55,36 @@
 
       <hr class="dividerline"> </hr>
     </section>
+    <section>
+      <div class="portfolio">
+        <h2>Our Work</h2>
+         <div class="card-container">
+          <div class="card">
+            <img src="{{ url_for('static',filename='images/dovetail.png')}}">
+            <div class="card-content">
+              <h3>Dovetail Chess</h3>
+              <p> Play at www.dovetail.cd-us.site <br>
+               Languages: Python, HTML/CSS/JS, Docker
+               Services: Docker, VPS, Linux
+              </p>
+              <a href="https://www.dovetail.cd-us.site" class="btn">PLAY</a>
+          </div>
+        </div>
+      </div>
+        <div class="card-container">
+          <div class="card">
+            <img src="{{ url_for('static',filename='images/TexSEF.png')}}">
+            <div class="card-content">
+              <h3>TexSEF Apps</h3>
+              <p> In Development <br>
+               Languages: Kotlin, Swift, HTML, CSS, JavaScript
+               Services: Docker, VPS, Linux, Android, iOS
+              </p>
+              <a href="#" class="btn">IN DEV</a>
+          </div>
+        </div>
+      </div>
+    </section>
     <script>
         const overlay = document.querySelector('.glow-overlay');
         window.addEventListener('mousemove', (e) =>{
