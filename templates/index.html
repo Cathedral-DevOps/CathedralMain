@@ -14,84 +14,51 @@
     <section class="navigation">
       <header class="header">
         <div class="header_content">
-          <a href="" class="logo">
-            <img class="logo_img" src="{{ url_for('static',filename='images/logo.svg')}}" alt="Company Logo" />
-          </a>
+          
           <nav class="nav">
             <ul class="nav_list">
               <li class="nav_item">
-                <a href="{{ url_for('home') }}" target="_blank" class="nav_link">Home</a>
+                <a href="{{ url_for('home') }}" target="_blank" class="nav_link">home</a>
               </li>
               <li class="nav_item">
-                <a href="{{ url_for('pricing') }}" target="_blank" class="nav_link">Pricing</a>
+                <a href="{{ url_for('pricing') }}" target="_blank" class="nav_link">pricing</a>
               </li>
               <li class="nav_item">
-                <a href="{{ url_for('orders') }}" target="_blank" class="nav_link">Orders</a>
+                <a href="{{ url_for('orders') }}" target="_blank" class="nav_link">orders</a>
               </li>
               <li class="nav_item">
-                <a href="{{ url_for('about') }}" target="_blank" class="nav_link">About</a>
+                <a href="{{ url_for('about') }}" target="_blank" class="nav_link">about</a>
               </li>
             </ul>
           </nav>
+          <a href="" class="logo">
+            <img class="logo_img" src="{{ url_for('static',filename='images/logo.svg')}}" alt="Company Logo" />
+          </a>
         </div>
       </header>
+      
     </section>
-    <section class="hero">
-        <div class="glow-overlay"></div>
-        <div class="grid-background"></div>
-      <h1 class="h1primary">Welcome to Cathedral Development!</h1>
-      <p class="p-primary"> 
-        Your one-stop shop for SaaS, web development, app development, iOS,
-        Android, and more!
-        <br>
-        Visit "Pricing" to view our pricing for our different services. 
-        <br>
-        If you would like to learn more about Cathedral, our team, and our 
-        Catholic values, visit "About."
-        <br> You can order our services at the 
-        "Orders" tab!
-      </p>
-      <div class="box"></div>
-
-      <hr class="dividerline"> </hr>
-    </section>
-    <section>
-      <div class="portfolio">
-        <h2>Our Work</h2>
-         <div class="card-container">
-          <div class="card">
-            <img src="{{ url_for('static',filename='images/dovetail.png')}}">
-            <div class="card-content">
-              <h3>Dovetail Chess</h3>
-              <p> Play at www.dovetail.cd-us.site <br>
-               Languages: Python, HTML/CSS/JS, Docker
-               Services: Docker, VPS, Linux
-              </p>
-              <a href="https://dovetail.cd-us.site" class="btn">PLAY</a>
-          </div>
-        </div>
-      </div>
-        <div class="card-container">
-          <div class="card">
-            <img src="{{ url_for('static',filename='images/TexSEF.png')}}">
-            <div class="card-content">
-              <h3>TexSEF Apps</h3>
-              <p> In Development <br>
-               Languages: Kotlin, Swift, HTML, CSS, JavaScript
-               Services: Docker, VPS, Linux, Android, iOS
-              </p>
-              <a href="#" class="btn">IN DEV</a>
-          </div>
-        </div>
+    <section class="hero" style="min-height:100vh; display:flex; align-items:center; justify-content:center; background:#f7f7f8; padding-top:80px;">
+        <a class="btn" href="#">order now</a>
+        <div class="heading" style="text-align:center; color:#0f172a;">
+          <h1><em>real</em> <br>
+           <span class="heading-bolded">programming for</span><br>
+           <em>your</em> needs.
+        </h1>
+        
       </div>
     </section>
-    <script>
-        const overlay = document.querySelector('.glow-overlay');
-        window.addEventListener('mousemove', (e) =>{
-            overlay.style.setProperty('--mouse-x', `${e.clientX}px`)
-            overlay.style.setProperty('--mouse-y', `${e.clientY}px`)
+    <section class="sub" style="padding: 5px; min-height: 40vh; display: flex; flex-direction: column; align-items: center; justify-content: center; background: #f7f7f8; padding-top: 80px; box-sizing: border-box;">
+  
+  <div class="subheading" style="text-align: center; color: #0f172a; margin-bottom: 20px;">
+    <h1 style="color: #9f7c50;">all your services - one<br>place</h1>
+    <p>whatever you need, we'll make it. from SaaS to game development<br>to even CGI, our team can make it happen for you. made by high school<br>sophomores.</p>
+  </div>
+  <img src="{{ url_for('static',filename='images/DOCKER3DRENDER.svg')}}">
+  <!-- Your visible transparent box -->
+  <div class="box" style="width: 250px; height: 150px; background: transparent; border: 3px solid #9f7c50; border-radius: 8px; box-sizing: border-box; color: black;"> More flies are caught with a drop<br>of honey than with a whole barrel<br>of vinegar - St. Francis De Sales</div>
 
-        })
-    </script>
+</section>
+        
   </body>
 </html>
