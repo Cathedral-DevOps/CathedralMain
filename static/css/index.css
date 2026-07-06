@@ -2,17 +2,15 @@
 
 @font-face {
   font-family: 'Garet';
-  src: url("{{ url_for('static', filename='fonts/Garet-Book.ttf') }}") format('truetype');
+  /* ../ steps out of the css folder, then enters fonts */
+  src: url('../fonts/Garet-Book.ttf') format('truetype'); 
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
-@font-face {
-  font-family: 'Garet';
-  src: url("{{ url_for('static', filename='fonts/Garet-Heavy.ttf') }}") format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap
+
+.wrapper{
+  display: grid;
 }
 * {
   margin: 0;
@@ -30,7 +28,7 @@ ul {
 /* Style for the body */
 body {
   background-color: #fdf9ee;
-  font-family: "Garet-Book", sans-serif;
+  font-family: "Garet", sans-serif;
   font-weight: 400;
   min-height: 5000px;
   color:white;
@@ -60,11 +58,11 @@ body {
 .logo_img,
 .logo_image {
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 200px;
+  height: auto;
   object-fit: contain;
   flex-shrink: 0;
-  margin-right:450px;
+  margin-right:170px;
 }
 
 .nav_list{
@@ -74,10 +72,10 @@ column-gap: 45px;
 
 .nav_link {
   color: rgba(0, 0, 0, 0.75);
-  font-size: 15px;
+  font-size: 17px;
   transition: all .4s;
   position: relative;
-  font-family: "Garet",sans-serif;
+  font-family: "Garet",sans-serif !important;
   font-weight:700;
 }
 .nav_link:hover, .nav_link:focus{
@@ -102,19 +100,19 @@ opacity: 1;
 .btn{
     color : #ffffff;
     background-color: #e6c18a;
-    padding: 20px 65px;
+    padding: 14px 50px;
     border-radius: 1000px;
-    font-size:24px;
+    font-size:18px;
     font-weight: 700;
     transition: all .2s;
-    margin-left: 325px;
-    margin-bottom: 355px;
-    font-family: "Inter", sans-serif;
+    font-family: "Garet", sans-serif;
+    font-weight: 700;
     display:block;
+    padding: 5px;
     
 }
-.bth:hover{
-    color:black;
+.btn:hover{
+    color: rgb(225, 225, 225);
     background-color: #e6c18a;
 }
 /* media queries*/
@@ -134,63 +132,76 @@ opacity: 1;
     margin-left: 600px;
     margin-bottom: 450px;
     font-size: 85px;
-    font-family: "Garet", sans-serif;
+    font-family: "Inter", sans-serif;
     line-height: 1.5em;
     font-weight: 400;
 
 }
-span{
-    font-family: "Garet",sans-serif !important;
-    font-weight:700 !important;
-    letter-spacing: 1px;
-}
-.sub{
-    top: 0;
 
+/*Grid----------------------------------------------------------------------------*/
+.grid-container{
+  display: grid;
+  grid-template-columns: 1fr 2.2fr;
+  grid-template-rows: 4fr 2fr;
+  gap: .2em;
+  justify-items: center;
+  align-items: center;
 }
-.subheading{
+.item{
+  padding: 2em;
+  background-color: #fdf9ee;
+  color:rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 8px;
+  font-size: 5rem;
+}
+.item-type-2{
+  padding: 2em;
+  background-color: fdf9ee;
+  color: #9f7c50;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 2.4rem;
+  font-weight:700;
+}
+.item-type-3{
+  padding: 2em;
+  background-color: fdf9ee;
+  color: #000000;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight:400;
+  margin-bottom: 120px;
+}
+.item-type-4{
+  padding: 2em;
+  background-color: #fdf9ee;
+  color: #000000;
+  text-align: center;
+  font-size: .9rem;
+  font-weight:400;
+  height: 2px;
+}
+.grid-container-2 {
+  display: grid;
+  /* FIX: Columns dynamically wrap. Cards will never shrink smaller than 250px */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 19px;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-    top:0;
-    margin-bottom: 15500px;
-    color: #9f7c50;
-    text-align: left;
-    font-size: 45px;
-    font-family: "Garet", sans-serif;
-    font-weight: 700;
-    margin-right: 950px;
-    margin-top:-150px;
-
-}
-.subheading p{
-    font-size:25px;
-    padding: 10px;
-    margin-top: 20px;
-    color: #595045;
-    text-align: left;
-}
-.box{
-    border: #9f7c50;
-    width: 510px !important;
-    height: 270px !important;
-    border: 4px solid #9f7c50;
-    background-color: transparent;
-    box-sizing: border-box;
-    z-index: 99999;
-    position: relative !important;
-    margin-left: -950px;
-    display:flex;
-    margin-top: -350px;
-    justify-content: center !important;
-    align-items: center !important;
-    color:#9f7c50 !important;
-    font-family: "Garet",sans-serif;
-    font-size:25px;
-    font-style: italic;
-}
-.sub img{
-    width: 850px;
-    margin-right: -1050px;
-    padding:10px;
-    height: auto;
-    border-radius: 20px;
+.item-type-5 {
+  padding: 2em;
+  background-color: #fdf9ee;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 8px;
+  width: 100%; /* ADDED: Ensures cards fill out their grid columns properly */
+  height: auto; /* CHANGED: Fixed 550px height can clip text when layout wraps */
+  min-height: 550px; /* Optional: Sets a baseline height instead */
 }
