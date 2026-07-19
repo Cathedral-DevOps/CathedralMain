@@ -27,7 +27,7 @@ ul {
 }
 /* Style for the body */
 body {
-  background-color: #ffffff;
+  background-image: linear-gradient(to left,#000257,#000130);
   font-family: "Garet", sans-serif;
   font-weight: 400;
   min-height: 5000px;
@@ -37,7 +37,6 @@ body {
 
 /* Style for the header */
 .header {
-  background-color: #ffffff;
   position: fixed;
   width: 100%;
   top: 0;
@@ -50,6 +49,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 30px;
+    margin-top: 10px;
 }
 .logo {
   display: inline-flex;
@@ -71,7 +71,7 @@ column-gap: 45px;
 }
 
 .nav_link {
-  color: rgba(0, 0, 0, 0.75);
+  color: rgba(255,255,255 0.75);
   font-size: 17px;
   transition: all .4s;
   position: relative;
@@ -79,14 +79,14 @@ column-gap: 45px;
   font-weight:700;
 }
 .nav_link:hover, .nav_link:focus{
-    color: rgb(206, 200, 119)
+    color: rgb(162, 186, 212)
     
 }
 .nav_link::after {
     content: '';
     height: 2px;
     width: 100%;
-    background-color: rgb(189, 156, 24);
+    background-color: rgb(245, 245, 245);
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -97,24 +97,7 @@ column-gap: 45px;
 .nav_link:hover::after{
 opacity: 1;    
 }
-.btn{
-    color : #ffffff;
-    background-color: #e6c18a;
-    padding: 14px 50px;
-    border-radius: 1000px;
-    font-size:18px;
-    font-weight: 700;
-    transition: all .2s;
-    font-family: "Garet", sans-serif;
-    font-weight: 700;
-    display:block;
-    padding: 5px;
-    
-}
-.btn:hover{
-    color: rgb(225, 225, 225);
-    background-color: #e6c18a;
-}
+
 /* media queries*/
 @media (max-width: 650px){
     .header_content{
@@ -141,67 +124,39 @@ opacity: 1;
 /*Grid----------------------------------------------------------------------------*/
 .grid-container{
   display: grid;
-  grid-template-columns: 1fr 2.2fr;
-  grid-template-rows: 4fr 2fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   gap: .2em;
   justify-items: center;
   align-items: center;
 }
 .item{
   padding: 2em;
-  background-color: #ffffff;
-  color:rgb(0, 0, 0);
+  background-image: transparent;
+  color:rgb(255, 255, 255);
   text-align: center;
   border-radius: 8px;
   font-size: 5rem;
 }
-.item-type-2{
+.item-glow{
   padding: 2em;
-  background-color: fdf9ee;
-  color: #9f7c50;
+  background-image: transparent;
+  color:rgb(255, 255, 255);
   text-align: center;
-  border-radius: 8px;
-  font-size: 2.4rem;
-  font-weight:700;
-}
-.item-type-3{
-  padding: 2em;
-  background-color: fdf9ee;
-  color: #000000;
-  text-align: center;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  font-weight:400;
-  margin-bottom: 120px;
-}
-.item-type-4{
-  padding: 2em;
-  background-color: #ffffff;
-  color: #000000;
-  text-align: center;
-  font-size: .9rem;
-  font-weight:400;
-  height: 2px;
-}
-.grid-container-2 {
-  display: grid;
-  /* FIX: Columns dynamically wrap. Cards will never shrink smaller than 250px */
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 19px;
-  justify-items: center;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+  border-radius: 16px;
+  font-size: 5rem;
+  position: relative;
+  display: inline-block;
+  transition: background 0.4s ease, filter 0.4s ease;
 
-.item-type-5 {
-  padding: 2em;
-  background-color: #ffffff;
-  color: rgb(0, 0, 0);
-  text-align: center;
-  border-radius: 8px;
-  width: 100%; /* ADDED: Ensures cards fill out their grid columns properly */
-  height: auto; /* CHANGED: Fixed 550px height can clip text when layout wraps */
-  min-height: 550px; /* Optional: Sets a baseline height instead */
+}
+.item-glow img {
+  display: block;
+
+}
+.item-glow:hover{
+  transition: filter 0.2s ease;
+
+  filter: drop-shadow(0 0 15px rgba(112, 0, 255, 0.6))
+          drop-shadow(0 0 30px rgba(0, 212, 255, 0.4));
 }
